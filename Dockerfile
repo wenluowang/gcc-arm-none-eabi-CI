@@ -9,6 +9,6 @@ RUN apt-get update -qq && \
     tar xjf /tmp/gcc-arm-none-eabi.tar.bz2 && \
     rm /tmp/gcc-arm-none-eabi.tar.bz2
 
-    ENV PATH "$PATH:/opt/gcc-arm-none-eabi-9-2019-q4-major/bin"
+    ENV PATH "$PATH:/opt/gcc-arm-none-eabi-4_8-2014q3-20140805/bin"
 
 
