@@ -16,9 +16,9 @@ FROM ubuntu:18.04
 ENV PATH="/opt/gcc-arm-none-eabi/bin:${PATH}"
 RUN apt-get update -y && apt-get install -y --no-install-recommends make git bzip2 lib32z1 lib32ncurses5 \
     && rm -rf /var/lib/apt/lists/*
-ADD https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q1-update/+download/gcc-arm-none-eabi-4_9-2015q1-20150306-linux.tar.bz2 /tmp/
-RUN tar -xjf /tmp/gcc-arm-none-eabi-4_9-2015q1-20150306-linux.tar.bz2 -C /tmp/ \
-    && mv /tmp/gcc-arm-none-eabi-4_9-2015q1 /opt/gcc-arm-none-eabi \
+ADD https://launchpad.net/gcc-arm-embedded/4.6/4.6-2012-q4-update/+download/gcc-arm-none-eabi-4_6-2012q4-20121016.tar.bz2 /tmp/
+RUN tar -xjf /tmp/gcc-arm-none-eabi-4_6-2012q4-20121016.tar.bz2 -C /tmp/ \
+    && mv /tmp/gcc-arm-none-eabi-4_6-2012q4 /opt/gcc-arm-none-eabi \
     && rm -rf /tmp/*
 
 # FROM derekamz/awscli:latest
