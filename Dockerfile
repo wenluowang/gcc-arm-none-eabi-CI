@@ -1,4 +1,4 @@
-# FROM ubuntu:18.04
+FROM ubuntu:18.04
 # RUN apt-get update -qq && \
 #     apt-get install -y software-properties-common --no-install-recommends && \
 #     apt-get install -y -qq  curl make git autoconf libtool g++ && \
@@ -21,7 +21,7 @@
 #     && mv /tmp/gcc-arm-none-eabi-4_9-2015q1 /opt/gcc-arm-none-eabi \
 #     && rm -rf /tmp/*
 
-FROM derekamz/awscli:latest
+# FROM derekamz/awscli:latest
 
 ENV PATH="/opt/gcc-arm-none-eabi/bin:${PATH}"
 RUN apt-get update -y && apt-get install -y --no-install-recommends git bzip2 lib32z1 lib32ncurses5 \
